@@ -1,0 +1,51 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0;
+  
+  --s-font-weight: 400;
+  --m-font-weight: 600;
+  --l-font-weight: 700;
+  --l-font-size: 1.2rem;
+  --s-font-size: 0.8rem;
+  --font-color: #8d91a0;
+  --main-color: #2c2c4d;
+  --bg-color: #000033;
+  
+  font-family: 'Nunito', sans-serif;
+  /* color: white; */
+  
+}
+
+body h1 {
+  font-size: 1.8rem;
+  /* color:white; */
+  
+}
+
+body h2 {
+  font-size: 1.4rem;
+}
+
+body h3 {
+  font-size: 1rem;
+}
+
+html {
+  font-size:62.5%;
+  
+  margin:0
+  
+}
+
+ion-icon {
+  /* color: white; */
+}
+
+
+
