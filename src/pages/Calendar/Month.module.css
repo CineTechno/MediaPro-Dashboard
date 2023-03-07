@@ -1,0 +1,43 @@
+.MonthContainer {
+    color:white;
+    background-color: var(--main-color-l);
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(5,1fr);
+    gap:2px;
+    align-content:stretch;
+    
+    align-content: right;
+}
+
+.dayColor{
+    
+   
+}
+
+.dayContainer{
+    
+    
+    background-color: var(--main-color);
+    align-items: top;
+    justify-self:stretch
+}
+
+.dayContainerFormat{
+    display:flex;
+    flex-direction: column;
+    text-align: left;
+    vertical-align: top;
+    padding-left:0.8rem;
+    padding-top:0.8rem;
+}
+
+.dayContainerCurrent{
+background-color: rgb(64, 41, 212);
+border-radius: 50%;
+width:2rem;
+height:2rem;
+
+
+}

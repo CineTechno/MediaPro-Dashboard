@@ -1,26 +1,25 @@
 import Card from "../../UI/Card";
-import classes from './Calendar.module.css'
-import dayjs from "dayjs";
+import Month from "./Month";
+import SidePanel from "./SidePanel";
+import CalendarHeader from "./CalendarHeader";
+import classes from "./Calendar.module.css";
+import { getMonth } from "./CalendarUtil";
+import { useState } from "react";
+
+
+
 
 const Calendar = () => {
-  const getMonth = (month) => {
-    const year = dayjs().year()
-    const firstDayOfTheMonth = dayjs(new Date(year, month, 1)).day()
-    let currentMonthCount = 0 - firstDayOfTheMonth
-    const daysMatrix = new Array(5).fill([]).map(()=> {
-      return new Array(7).fill(null).map(()=>{
-        currentMonthCount++
-        return dayjs(new Date(year,month, currentMonthCount)).format()
-      })
-    })
-  return daysMatrix 
-  }
+  
+  const [currentMonth, setCurrentMonth] = useState(getMonth())
+  
+  return <Card className={classes.calendarContainer}>
+    <CalendarHeader/>
+    <div className={classes.sidePanelContainer}>
+      <SidePanel/>
+      <Month month = {currentMonth}/>
+    </div>
+  </Card>;
+};
 
-console.table(getMonth(3))
-    return<Card className={classes.calendarContainer}>
-    
-    </Card> 
-  };
-  
-  export default Calendar;
-  
+export default Calendar;
