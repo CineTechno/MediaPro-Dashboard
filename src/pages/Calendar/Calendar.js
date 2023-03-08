@@ -4,7 +4,8 @@ import SidePanel from "./SidePanel";
 import CalendarHeader from "./CalendarHeader";
 import classes from "./Calendar.module.css";
 import { getMonth } from "./CalendarUtil";
-import { useState } from "react";
+import { useState, useContext,useEffect } from "react";
+import GlobalContext from "../../Context/GlobalContext";
 
 
 
@@ -12,6 +13,11 @@ import { useState } from "react";
 const Calendar = () => {
   
   const [currentMonth, setCurrentMonth] = useState(getMonth())
+  const {monthIndex} = useContext(GlobalContext)
+
+  useEffect(()=> {
+    setCurrentMonth(getMonth(monthIndex))
+  }, [monthIndex])
   
   return <Card className={classes.calendarContainer}>
     <CalendarHeader/>
