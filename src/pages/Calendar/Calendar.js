@@ -10,6 +10,7 @@ import GlobalContext from "../../Context/GlobalContext";
 
 
 
+
 const Calendar = () => {
   
   const [currentMonth, setCurrentMonth] = useState(getMonth())
@@ -23,7 +24,9 @@ const Calendar = () => {
     <CalendarHeader/>
     <div className={classes.sidePanelContainer}>
       <SidePanel/>
+      
       <Month month = {currentMonth}/>
+      
     </div>
   </Card>;
 };
