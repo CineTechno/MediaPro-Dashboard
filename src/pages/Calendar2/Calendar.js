@@ -3,18 +3,20 @@ import Month from "./Month";
 import SidePanel from "./SidePanel";
 import CalendarHeader from "./CalendarHeader";
 import classes from "./Calendar.module.css";
-import { getMonth } from "./CalendarUtil";
+import { getMonth, getWeek } from "./CalendarUtil";
 import { useState, useContext,useEffect } from "react";
-import GlobalContext from "../../Context/GlobalContext";
+
+import CalendarContext from "../../Context/CalendarContext";
 
 
-
+getWeek()
 
 
 const Calendar = () => {
   
   const [currentMonth, setCurrentMonth] = useState(getMonth())
-  const {monthIndex} = useContext(GlobalContext)
+  const {monthIndex, setMonthIndex} = useContext(CalendarContext)
+
 
   useEffect(()=> {
     setCurrentMonth(getMonth(monthIndex))
@@ -22,12 +24,11 @@ const Calendar = () => {
   
   return <Card className={classes.calendarContainer}>
     <CalendarHeader/>
-    <div className={classes.sidePanelContainer}>
-      <SidePanel/>
+    
+    <Month month = {currentMonth}/>
+    
       
-      <Month month = {currentMonth}/>
-      
-    </div>
+    
   </Card>;
 };
 

@@ -1,0 +1,106 @@
+.EventModalContainer{
+    display:flex;
+    flex-direction: column;
+    translate: -105%;
+    position: absolute;
+    
+    
+    
+    
+}
+
+
+
+.EventModalContainer label {
+    color:black;
+    width: 90%;
+    align-self: center;
+    margin-bottom: 3px;
+    font-family:'Nunito', sans-serif ;
+    font-weight:600;
+    font-size: 1.2rem
+
+}
+
+.EventModalContainer input[type='submit'] {
+    margin-top:12px;
+    width: 90%;
+    padding:6px;
+    align-self: center;
+    border:none;
+    background-color:#45c86d;
+    font-family:'Nunito', sans-serif ;
+    font-weight:600;
+    color: white;
+}
+
+.EventModalForm {
+    display:flex;
+    flex-direction: column;
+    background-color: var(--main-color-input);
+    padding:10px;
+    border-radius: 0 0 4px 4px;
+}
+
+.EventModalContainer header{
+background-color: var(--main-color-l);
+height:25px;
+border-radius: 4px 4px 0px 0px;
+cursor:grab
+}
+
+input {
+    padding:10px;
+    border-width:0 0 1px 0;
+    background-color: var(--main-color-input);
+    color:var(--main-color);
+    border-color: #ccccd4;
+      
+}
+input:focus{
+    outline:none;
+    border-bottom: 1px solid black;
+    
+}
+
+input:active {
+    outline:none;
+}
+
+input[type="date"] {
+    background-color: transparent;
+    font-family:'Nunito', sans-serif ;
+    border-width: 0;
+    display:inline;
+    
+    
+}
+
+select{
+    border-width:1px;
+    border-color:#ccccd4;
+    outline:none;
+    background-color: var(--main-color-input);
+    width: 90%;
+    align-self: center;
+}
+
+select:focus{
+    outline:none
+}
+
+/* input[type="date"]::-webkit-datetime-edit-text {
+    display: none;
+  }
+
+  input[type="date"]::-webkit-datetime-edit-month-field {
+    display:none
+  }
+
+  input[type="date"]::-webkit-datetime-edit-day-field {
+    display:none
+  }
+
+  input[type="date"]::-webkit-datetime-edit-year-field {
+    display: none;
+  } */

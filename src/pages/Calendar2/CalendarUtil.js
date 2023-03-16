@@ -13,6 +13,11 @@ export function getMonth (month = dayjs().month()) {
         return dayjs(new Date(year, month, currentMonthCount));
       });
     });
-    console.log(daysMatrix)
+   
     return daysMatrix;
   };
+
+  export function getWeek() {
+    const day = dayjs().day()
+  
+  }

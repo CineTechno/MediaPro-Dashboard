@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import GlobalContext from '../../Context/GlobalContext';
+import GlobalContext from '../../Context/CalendarContext';
 import classes from './Calendar.module.css'
 import dayjs from 'dayjs';
 const CalendarHeader = () => {

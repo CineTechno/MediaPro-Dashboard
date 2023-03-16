@@ -1,9 +1,0 @@
-.EventModalContainer{
-    display:flex;
-    width:10rem;
-    height: 10rem;
-    translate: -100%;
-    position: absolute;
-    background-color: white;
-    
-}
